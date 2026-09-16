@@ -1,0 +1,26 @@
+{
+  "metric_windows": {
+    "Rating": "all",
+    "Average Combat Score": "all",
+    "Kills:Deaths": "all",
+    "Kills Per Round": "all",
+    "Assists Per Round": "all",
+    "Headshot %": "recent",
+    "Average Damage Per Round": "recent",
+    "First Kills Per Round": "recent",
+    "First Deaths Per Round": "recent",
+    "Kill, Assist, Trade, Survive %": "recent",
+    "Clutch Success % (clean)": "recent"
+  },
+  "recent_years": [
+    2024,
+    2025,
+    2026
+  ],
+  "lower_is_better": [
+    "First Deaths Per Round"
+  ],
+  "min_rounds": 20,
+  "min_agent_sample": 50,
+  "source": "VCT 2021-2026 (Kaggle)"
+}

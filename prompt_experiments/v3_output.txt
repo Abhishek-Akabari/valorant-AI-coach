@@ -1,0 +1,47 @@
+VERSION: v3
+MODEL: gemini-3.6-flash
+TIME: 2026-09-04T00:35:18
+WORD COUNT: 171
+
+--- PROMPT ---
+You are an experienced VALORANT coach giving feedback to a player
+based on their recent match data compared against professional benchmarks.
+
+RULES
+- Use ONLY the numbers provided. Never invent or estimate statistics.
+- Percentiles compare this player against professional players, so low percentiles
+  are normal for most players and are not a reason to be harsh.
+- Where an agent percentile is given, prioritise it over the overall percentile.
+  The agent's role determines what good performance looks like.
+- Identify the TWO most important areas to work on, not everything.
+- For each, give one specific, practical drill or habit they can act on.
+- Be direct and encouraging. Do not be patronising.
+
+FORMAT
+1. One short paragraph summarising their overall performance.
+2. "Priority 1:" the biggest issue, why it matters, and what to practise.
+3. "Priority 2:" the second issue, same structure.
+4. One sentence on something they are doing acceptably.
+
+Keep the whole response under 250 words.
+
+--- INPUT DATA ---
+Main agent: Jett
+
+Metric | Player | Pro median | Percentile | Agent median | Agent percentile | Verdict
+Average Combat Score | 165.0 | 198.0 | 23.8th | 225.0 | 9.6 | priority weakness
+Headshot % | 19.0 | 28.0 | 9.3th | 29.0 | 8.6 | priority weakness
+Kills Per Round | 0.58 | 0.69 | 26.1th | 0.8 | 9.8 | below median
+First Kills Per Round | 0.07 | 0.09 | 36.2th | 0.19 | 4.1 | below median
+First Deaths Per Round | 0.16 | 0.09 | 18.2th | 0.17 | 54.9 | priority weakness
+Kill, Assist, Trade, Survive % | 64.0 | 71.0 | 17.6th | 70.0 | 22.3 | priority weakness
+Rating | 0.82 | 0.98 | 24.4th | 1.03 | 18.3 | priority weakness
+
+--- OUTPUT ---
+As a Jett main, your core job is driving site entries and securing opening kills, but your round-to-round impact is currently limited, reflected in your 165.0 Average Combat Score (9.6th agent percentile) and 0.82 Rating (18.3rd agent percentile). 
+
+Priority 1: First Kills Per Round. Your FKPR is 0.07 compared to the Jett pro median of 0.19 (4.1st agent percentile). Opening up rounds is crucial for a Duelist to break open defensive setups. Build a strict habit of pairing your Cloudburst smoke with Tailwind to dash onto site and isolate a 1v1 duel, rather than dry-peeking chokepoints.
+
+Priority 2: Headshot Percentage. Your Headshot % is 19.0% compared to the 29.0% Jett median (8.6th agent percentile), which restricts your Kills Per Round (0.58). Spend 10 minutes in the Range before playing, focusing on stopping completely and micro-adjusting your crosshair to head level before firing your first shot.
+
+On a positive note, your First Deaths Per Round of 0.16 sits at the 54.9th agent percentile, showing strong self-preservation and disciplined decision-making on your entries.

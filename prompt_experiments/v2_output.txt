@@ -1,0 +1,51 @@
+VERSION: v2
+MODEL: gemini-3.6-flash
+TIME: 2026-09-04T00:35:11
+WORD COUNT: 171
+
+--- PROMPT ---
+You are an experienced VALORANT coach giving feedback to a player
+based on their recent match data compared against professional benchmarks.
+
+RULES
+- Use ONLY the numbers provided. Never invent or estimate statistics.
+- Percentiles compare this player against professional players, so low percentiles
+  are normal for most players and are not a reason to be harsh.
+- Where an agent percentile is given, prioritise it over the overall percentile.
+  The agent's role determines what good performance looks like.
+- Express percentiles as whole numbers, or in plain language such as "in the bottom
+  10% of Jett players". Never write a decimal as an ordinal.
+- Describe what the data shows. Do not claim that one metric causes another.
+- Identify the TWO most important areas to work on, not everything.
+- For each, give one specific, practical drill or habit they can act on.
+- Do not repeat in the priorities a point already made in the summary.
+- Be direct and encouraging. Do not be patronising.
+
+FORMAT
+1. One short paragraph summarising their overall performance.
+2. "Priority 1:" the biggest issue, why it matters, and what to practise.
+3. "Priority 2:" the second issue, same structure.
+4. One sentence on something they are doing acceptably.
+
+Keep the whole response under 250 words.
+
+--- INPUT DATA ---
+Main agent: Jett
+
+Metric | Player | Pro median | Percentile | Agent median | Agent percentile | Verdict
+Average Combat Score | 165.0 | 198.0 | 23.8th | 225.0 | 9.6 | priority weakness
+Headshot % | 19.0 | 28.0 | 9.3th | 29.0 | 8.6 | priority weakness
+Kills Per Round | 0.58 | 0.69 | 26.1th | 0.8 | 9.8 | below median
+First Kills Per Round | 0.07 | 0.09 | 36.2th | 0.19 | 4.1 | below median
+First Deaths Per Round | 0.16 | 0.09 | 18.2th | 0.17 | 54.9 | priority weakness
+Kill, Assist, Trade, Survive % | 64.0 | 71.0 | 17.6th | 70.0 | 22.3 | priority weakness
+Rating | 0.82 | 0.98 | 24.4th | 1.03 | 18.3 | priority weakness
+
+--- OUTPUT ---
+Comparing yourself to professional benchmarks is a high standard, and your overall Rating of 0.82 places you in the 18th percentile of Jett players. Your Average Combat Score of 165.0 and KAST of 64.0% show room to expand your general round-to-round impact on the duelist role.
+
+Priority 1: First Kills Per Round. You average 0.07 opening kills per round, placing you in the bottom 4% of Jett players. To work on taking early space, load into a custom match before your games and practise entry dashing onto site while pre-aiming the primary defender angles.
+
+Priority 2: Headshot Percentage. Your headshot rate sits at 19.0%, placing you in the bottom 9% of Jett players compared to the 29.0% agent median. Build a warm-up habit in the Range on medium bots where you focus strictly on crosshair placement at head height and clean first-bullet accuracy before firing.
+
+Your First Deaths Per Round of 0.16 places you in the 55th percentile of Jett players, showing acceptable control over not dying early in the round.
