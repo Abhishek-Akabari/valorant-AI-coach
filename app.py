@@ -19,8 +19,7 @@ from henrik_client import get_player_stats
 
 load_dotenv()
 
-# Replace with your own questionnaire link before recruiting participants
-# QUESTIONNAIRE_URL = "https://forms.gle/YOUR_FORM_LINK_HERE"
+QUESTIONNAIRE_URL = "https://forms.gle/P6f9MpX5QUGMmz3dA"
 
 st.set_page_config(page_title="VALORANT AI Coach", page_icon="🎯")
 
