@@ -1,0 +1,57 @@
+VERSION: v2_live
+MODEL: gemini-3.6-flash
+TIME: 2026-09-28T15:22:48
+WORD COUNT: 193
+
+--- PROMPT ---
+You are an experienced VALORANT coach giving feedback to a player
+based on their recent match data compared against professional benchmarks.
+
+RULES
+- Use ONLY the numbers provided. Never invent or estimate statistics.
+- Percentiles compare this player against professional players, so low percentiles
+  are normal for most players and are not a reason to be harsh.
+- Where an agent percentile is given, prioritise it over the overall percentile.
+  The agent's role determines what good performance looks like.
+- Express percentiles as whole numbers, or in plain language such as "in the bottom
+  10% of Jett players". Never write a decimal as an ordinal.
+- Describe what the data shows. Do not claim that one metric causes another.
+- Identify the TWO most important areas to work on, not everything.
+- For each, give one specific, practical drill or habit they can act on.
+- Do not repeat in the priorities a point already made in the summary.
+- Be direct and encouraging. Do not be patronising.
+- Where ANALYSIS FINDINGS are provided, treat them as established conclusions and
+  build your advice around them. Do not contradict them.
+
+FORMAT
+1. One short paragraph summarising their overall performance.
+2. "Priority 1:" the biggest issue, why it matters, and what to practise.
+3. "Priority 2:" the second issue, same structure.
+4. One sentence on something they are doing acceptably.
+
+Keep the whole response under 250 words.
+
+--- INPUT DATA ---
+Main agent: Jett
+
+Metric | Player | Pro median | Percentile | Agent median | Agent percentile | Verdict
+Average Combat Score | 175.3 | 198.0 | 31.6th | 225.0 | 14.1 | below median
+Headshot % | 26.0 | 28.0 | 36.6th | 29.0 | 33.0 | below median
+Kills Per Round | 0.6 | 0.69 | 29.7th | 0.8 | 11.5 | below median
+Assists Per Round | 0.25 | 0.24 | 50.3th | 0.14 | 92.6 | above median
+Kills:Deaths | 0.77 | 0.99 | 24.8th | 1.08 | 12.0 | priority weakness
+Average Damage Per Round | 115.0 | 128.0 | 31.9th | 145.0 | 13.5 | below median
+First Kills Per Round | 0.066 | 0.09 | 36.2th | 0.19 | 4.1 | below median
+First Deaths Per Round | 0.066 | 0.09 | 66.7th | 0.17 | 92.9 | above median
+Kill, Assist, Trade, Survive % | 63.7 | 71.0 | 17.6th | 70.0 | 22.3 | priority weakness
+
+--- OUTPUT ---
+Your recent performance on Jett shows an Average Combat Score of 175.3 (14th Jett percentile) and an Average Damage Per Round of 115.0 (14th Jett percentile). As a Duelist, your current damage output and overall combat impact are sitting below agent benchmarks.
+
+**Priority 1:** Kill:Death Ratio. Your K:D sits at 0.77, placing you in the 12th percentile of Jett players. Winning duels is essential for maintaining site control and team momentum. 
+*Drill:* Run two Deathmatches daily strictly focused on pre-aiming common sightlines and firing 2-bullet rifle bursts, using Jett's dash immediately after taking an opening duel to break line of sight.
+
+**Priority 2:** Kill, Assist, Trade, Survive (KAST) Percentage. Your KAST is 63.7%, placing you in the 22nd percentile for Jett players, which shows a high frequency of rounds ending without a kill, assist, trade, or survival from you. 
+*Habit:* Before entrying a site, ping your exact dash path and call out for a teammate to follow closely so they are positioned to trade you if you fall.
+
+Your Assists Per Round of 0.25 puts you in the 93rd percentile of Jett players, showing solid utility usage that helps your team secure kills.
